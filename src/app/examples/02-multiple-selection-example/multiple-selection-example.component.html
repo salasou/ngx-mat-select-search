@@ -1,0 +1,18 @@
+
+<h3>Poste occupé</h3>
+<mat-form-field>
+  <mat-select [formControl]="form" placeholder="Jobs" multiple>
+    <mat-option *ngFor="let job of jobs" [value]="job">
+      {{job}}
+    </mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+
+<p>
+  Selected Jobs:
+</p>
+<ul *ngFor="let job of form?.value">
+  <li>{{job}}</li>
+</ul>
